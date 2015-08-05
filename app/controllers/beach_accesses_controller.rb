@@ -29,9 +29,23 @@ class BeachAccessesController < ApplicationController
   end
 
   def update
+    respond_to do |format|
+      if @ba.update(beach_access_params)
+        format.html { redirect_to @ba, notice: 'Beach access was successfully updated.' }
+        format.json { render :show, status: :ok, location: @ba }
+      else
+        format.html { render :edit }
+        format.json { render json: @ba.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def destroy
+    @ba.destroy
+    respond_to do |format|
+      format.html { redirect_to beach_accesses_url, notice: 'Beach access was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def homepage

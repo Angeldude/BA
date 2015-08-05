@@ -1,39 +1,59 @@
+<div class ="container">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @ba.image %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @ba.location %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Unmetered:</strong>
-  <%= @ba.unmetered %>
-</p>
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><%= @ba.location %>
 
-<p>
-  <strong>Metered:</strong>
-  <%= @ba.metered %>
-</p>
+            </h1>
+        </div>
+    </div>
 
-<p>
-  <strong>Shower:</strong>
-  <%= @ba.shower %>
-</p>
+    <!-- Portfolio Item Row -->
+     <div class="row">
 
-<p>
-  <strong>Bench:</strong>
-  <%= @ba.bench %>
-</p>
+         <div class="col-md-8">
+               <%=image_tag(@ba.image, class: "img-responsive show_page") %>
+         </div>
 
-<p>
-  <strong>Bench number:</strong>
-  <%= @ba.bench_number %>
-</p>
+         <div class="col-md-4">
+             <h3>Description Text</h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+             <h3>Location Details</h3>
+             <ul>
+                 <li><p>
+                   <strong>Unmetered Parking Spaces:</strong>
+                   <%= @ba.unmetered %>
+                 </p></li>
 
+                 <li><p>
+                   <strong>Metered Parking Spaces:</strong>
+                   <%= @ba.metered %>
+                 </p></li>
+
+                 <li><p>
+                   <strong>Shower:</strong>
+                   <%= @ba.shower %>
+                 </p></li>
+
+                 <li><p>
+                   <strong>Number of Benches:</strong>
+                   <%= @ba.bench %>
+                 </p></li>
+
+
+             </ul>
+         </div>
+
+     </div>
+
+
+<div class="container">
+<%= link_to 'Back', beach_accesses_path %> |
 <%= link_to 'Edit', edit_beach_access_path(@ba) %> |
-<%= link_to 'Back', beach_accesses_path %>
+<%= link_to 'Destroy', beach_access_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
