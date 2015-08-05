@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  location: MyString
+  unmetered: 1
+  metered: 1
+  shower: false
+  bench: false
+  bench_number: 1
+
+two:
+  image: MyString
+  location: MyString
+  unmetered: 1
+  metered: 1
+  shower: false
+  bench: false
+  bench_number: 1

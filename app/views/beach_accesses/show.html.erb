@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @ba.image %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @ba.location %>
+</p>
+
+<p>
+  <strong>Unmetered:</strong>
+  <%= @ba.unmetered %>
+</p>
+
+<p>
+  <strong>Metered:</strong>
+  <%= @ba.metered %>
+</p>
+
+<p>
+  <strong>Shower:</strong>
+  <%= @ba.shower %>
+</p>
+
+<p>
+  <strong>Bench:</strong>
+  <%= @ba.bench %>
+</p>
+
+<p>
+  <strong>Bench number:</strong>
+  <%= @ba.bench_number %>
+</p>
+
+<%= link_to 'Edit', edit_beach_access_path(@ba) %> |
+<%= link_to 'Back', beach_accesses_path %>
