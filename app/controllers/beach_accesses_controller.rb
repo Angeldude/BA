@@ -13,6 +13,7 @@ class BeachAccessesController < ApplicationController
   end
 
   def show
+        @ba = BeachAccess.find(params[:id])
   end
 
   def create
