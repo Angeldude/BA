@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ .search-bar {
+   
+ }
+
+
+.show_details_list {
+  text-align: right;
+}
+.page-header-center {
+  text-align: center;
+}
+
+
+.index_center {
+  text-align: center;
+}

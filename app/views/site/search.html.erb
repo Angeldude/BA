@@ -1,0 +1,15 @@
+
+<% if @results.count > 0 %>
+<ul>
+  <% @results.each do |result| %>
+  <%= content_tag_for :li, result do %>
+  <%= link_to result.location, result %>
+  <% end %>
+  <% end %>
+
+</ul>
+
+<% else %>
+<p>We could not find any matching results.</p>
+
+    <% end %>

@@ -2,11 +2,11 @@ class BeachAccessesController < ApplicationController
   before_action :set_beach_access, only: [:show, :edit, :update, :destroy]
 
   def index
-    @beach_accesses = BeachAccess.all
+    @beach_accesses = BeachAccess.all.order(created_at: :asc).paginate(page: params[:page], per_page: 9)
   end
 
   def new
-    @ba = BeachAccess.new
+    @ba = current_admin.beach_accesses.build
   end
 
   def edit
@@ -17,7 +17,7 @@ class BeachAccessesController < ApplicationController
   end
 
   def create
-    @ba = BeachAccess.new(beach_access_params)
+    @ba = current_admin.beach_accesses.build(beach_access_params)
 
     respond_to do |format|
       if @ba.save
@@ -50,6 +50,13 @@ class BeachAccessesController < ApplicationController
 
   def homepage
   end
+
+  def about
+  end
+
+  def contact
+  end
+  
 
   private
 

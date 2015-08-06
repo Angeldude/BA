@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>3 Col Portfolio - Start Bootstrap Template</title>
+  <title>Naples Beach</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,6 @@
 
 
 
-  <title>NaplesBeach</title>
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -44,14 +43,20 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                   <li>
-                      <%= link_to 'All', beach_accesses_path %>
+                      <%= link_to 'All Locations', beach_accesses_path %>
                   </li>
                   <li>
-                      <a href="#">About</a>
+                      <%= link_to 'About', about_path %>
                   </li>
                   <li>
                       <a href="#">Contact</a>
                   </li>
+                  <li><p class="search-bar">
+                    <%= form_tag search_path do %>
+                    <%= search_field_tag :location %>
+                    <%= submit_tag "Search" %>
+                    <% end %>
+                  </p></li>
               </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -59,7 +64,9 @@
       <!-- /.container -->
   </nav>
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
 
 
         <hr>
@@ -69,7 +76,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p><small>Copyright &copy; Mashon Thomas &amp; Angel Vanegas, 2015</small></p>
                 </div>
             </div>
             <!-- /.row -->
