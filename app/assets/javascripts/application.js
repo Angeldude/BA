@@ -11,6 +11,16 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
+//= require turbolinks
+
+
+
+$(function(){
+  $('.carousel').carousel({
+    interval: 3000,
+    pause: false
+  });
+});
