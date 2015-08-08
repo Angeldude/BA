@@ -42,7 +42,9 @@
             </div>
 
         </div>
+        <% if admin_signed_in? %>
         <%= link_to 'New', new_beach_access_path %>
+        <% end %>
 </div> <!-- div class container END!!! -->
 
 

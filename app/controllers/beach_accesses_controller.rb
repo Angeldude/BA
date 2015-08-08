@@ -1,5 +1,6 @@
 class BeachAccessesController < ApplicationController
   before_action :set_beach_access, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:edit, :update, :destroy, :new]
 
   def index
     @beach_accesses = BeachAccess.all.order(created_at: :asc).paginate(page: params[:page], per_page: 9)
@@ -13,7 +14,6 @@ class BeachAccessesController < ApplicationController
   end
 
   def show
-        @ba = BeachAccess.find(params[:id])
   end
 
   def create
@@ -56,7 +56,7 @@ class BeachAccessesController < ApplicationController
 
   def contact
   end
-  
+
 
   private
 

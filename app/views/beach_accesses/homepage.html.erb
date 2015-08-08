@@ -1,5 +1,8 @@
 
 <!-- Full Page Image Background Carousel Header -->
+<% if admin_signed_in? %>
+  <%= link_to "sign out", destroy_admin_session_path, method: :delete %>
+<% end %>
 <header id="myCarousel" class="carousel slide">
     <!-- Indicators -->
     <ol class="carousel-indicators">

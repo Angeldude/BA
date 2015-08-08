@@ -51,9 +51,10 @@
 
      </div>
 
-
+<% if admin_signed_in? %>
 <div class="container">
 <%= link_to 'Back', beach_accesses_path %> |
 <%= link_to 'Edit', edit_beach_access_path(@ba) %> |
 <%= link_to 'Destroy', beach_access_path, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
+<% end %>
