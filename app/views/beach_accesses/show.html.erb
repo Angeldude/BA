@@ -21,18 +21,21 @@
          </div>
 
          <div class="col-md-4">
-             <h3>Description Text</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-             <h3>Location Details</h3>
+            <h3 class"location_details">Location Details</h3>
              <ul>
                  <li><p class="show_detail_list">
-                   <strong>Unmetered Parking Spaces:</strong>
+                   <strong>Beach Permit Parking Spaces:</strong>
                    <%= @ba.unmetered %>
                  </p></li>
 
                  <li><p class="show_detail_list">
-                   <strong>Metered Parking Spaces:</strong>
+                   <strong>Pay to Park Spaces:</strong>
                    <%= @ba.metered %>
+                 </p></li>
+
+                 <li><p class="show_detail_list">
+                   <strong>Handicap Parking Spaces:</strong>
+                   <%= @ba.handicap_parking_spaces %>
                  </p></li>
 
                  <li><p class="show_detail_list">
@@ -41,16 +44,30 @@
                  </p></li>
 
                  <li><p class="show_detail_list">
+                   <strong>Drinking Fountain:</strong>
+                   <%= @ba.drinking_fountain %>
+                 </p></li>
+
+                 <li><p class="show_detail_list">
                    <strong>Number of Benches:</strong>
                    <%= @ba.bench %>
                  </p></li>
 
+                 <li><p class="show_detail_list">
+                   <strong>Bike Rack:</strong>
+                   <%= @ba.bike_rack %>
+                 </p></li>
 
-             </ul>
+
+
+                </ul>
+                <h3>Description Text</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+
          </div>
 
      </div>
-
+<br>
 <% if admin_signed_in? %>
 <div class="container">
 <%= link_to 'Back', beach_accesses_path %> |

@@ -11,13 +11,18 @@
 </div>
 
 <div>
-<%= t.label :unmetered_parking_spaces %>
+<%= t.label :beach_permit_parking_spaces %>
 <%= t.text_field :unmetered %>
 </div>
 
 <div>
-<%= t.label :metered_parking_spaces %>
+<%= t.label :pay_to_park_spaces %>
 <%= t.text_field :metered %>
+</div>
+
+<div>
+<%= t.label :handicap_parking_spaces %>
+<%= t.text_field :handicap_parking_spaces %>
 </div>
 
 <div>
@@ -26,8 +31,18 @@
 </div>
 
 <div>
+<%= t.label :drinking_fountain %>
+<%= t.text_field :drinking_fountain %>
+</div>
+
+<div>
 <%= t.label :number_of_benches%>
 <%= t.text_field :bench %>
+</div>
+
+<div>
+<%= t.label :bike_rack%>
+<%= t.text_field :bike_rack %>
 </div>
 
 <%= t.submit %>
