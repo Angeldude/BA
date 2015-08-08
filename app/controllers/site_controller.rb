@@ -9,6 +9,6 @@ class SiteController < ApplicationController
   private
 
   def search_for_beach_access(location)
-    BeachAccess.where("location LIKE ?", "%#{location}%")
+    BeachAccess.where("location ILIKE ?", "%#{location}%")
   end
 end
