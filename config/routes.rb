@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   root 'beach_accesses#homepage'
   post '/search' => 'site#search'
   get '/about' => 'beach_accesses#about'
+  get '/contact' => 'beach_accesses#contact'
 
 end
